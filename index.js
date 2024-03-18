@@ -22,7 +22,7 @@ const addNewGoal = () => {
     const goals = goalList.querySelectorAll('li');
     let isDuplicate = false;
     goals.forEach(goal => {
-        if (goal.textContent === goalInput) {
+        if (goal.textContent.toLowerCase() === goalInput.toLowerCase()) {
             isDuplicate = true;
             alert('Goal already exists!');
             return; // Exit the loop early
